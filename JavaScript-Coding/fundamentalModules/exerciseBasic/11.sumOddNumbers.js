@@ -8,8 +8,8 @@ function sumOdd(num) {
         console.log(oddNumber);
         sum += oddNumber;
         num--;
-        oddNumber += 2; 
-        
+        oddNumber += 2;
+
     }
     console.log(`Sum: ${sum}`);
 
