@@ -11,6 +11,7 @@ function piramid(base, increment) {
 
         countFloors += 1;
         currentSumOfBlocks = ((base * base) * increment);
+        
         let currentStones = 0;
 
         if (countFloors % 10 == 5 || countFloors % 10 == 0) {
@@ -21,7 +22,7 @@ function piramid(base, increment) {
             stones += innerBlocks;
         }
 
-        if (base == increment) {
+        if (base == 1) {
             gold = ((base * base) * increment);
             console.log(`Stone required: ${stones}`);
             console.log(`Marble required: ${marbles}`);
@@ -29,7 +30,8 @@ function piramid(base, increment) {
             console.log(`Gold required: ${gold}`);
             console.log(`Final pyramid height: ${countFloors}`);
             return;
-        } else if (base < 0) {
+        } else if (currentSumOfBlocks == 4) {
+            gold = currentSumOfBlocks * increment;
             console.log(`Stone required: ${stones}`);
             console.log(`Marble required: ${marbles}`);
             console.log(`Lapis Lazuli required: ${lapis}`);
@@ -44,8 +46,12 @@ function piramid(base, increment) {
             stones += perimeter;
             marbles += ((base * base) * increment) - perimeter;
         }
+
         base -= 2;
-        base = base.Max_SAFE_INTEGER;
+        if (base == 0 || base < 0 || base < increment) {
+            base = increment;
+        }
+    
     }
 }
 piramid(11, 0.75);

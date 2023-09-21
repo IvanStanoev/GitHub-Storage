@@ -1,6 +1,6 @@
-function gitHub() {
+function gitHub(x) {
 
-    console.log("Welcome to GitHub");
-
+    let n = Number.MAX_SAFE_INTEGER;
+    console.log(n);
 }
-gitHub()
+gitHub(0.75)
