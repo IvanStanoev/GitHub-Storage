@@ -37,7 +37,7 @@ function monthPrinter(num) {
         case 12:
             console.log("December");
             break;
-    
+
         default:
             console.log("Error!");
             break;
