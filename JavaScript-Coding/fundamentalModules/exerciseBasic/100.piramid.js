@@ -4,35 +4,40 @@ function piramid(base, increment) {
     let marble = 0;
     let lapis = 0;
     let gold = 0;
-    let countFloors = 0;
 
-    //inner layer should be from stones
-    //outer layer should be from marble
-    //every 5-th outer layer is made from lapis not marble
-    //final step is made from gold
+    let height = 0;
+    let floor = 1;
 
-    while (base >= increment) {
-        
-        countFloors += 1;
+    for (let curSize = base; curSize > 0; curSize -= 2) {
 
-        //first step is base * base
-        currenSumOfBlocks = base * base;
-        
+        height += increment;
+        let totalArea = curSize ** 2;
 
-        //every second floor - base is reduced by 2 (one for each side)
-        base -= 2;
+        if (curSize <= 2) {
+            gold = totalArea * increment;
+
+        } else {
+            let stoneArea = (curSize - 2) ** 2;
+            stone += stoneArea * increment;
+
+            if (floor % 5 == 0) {
+                let lapisArea = totalArea - stoneArea;
+                lapis += lapisArea * increment;
+
+            } else {
+                let marbleArea = totalArea - stoneArea;
+                marble += marbleArea * increment;
+            }
+            
+        }
+        floor++;
     }
-    
-    
 
-    //stones - reduce base(current floor) with 2 and multiply with increment.
-    //lapis - for 5-th floor (lapis insteat marble)
-    //marble (base - 4) * inctement
-
-    //top layer = gold = base * increment
-
-    //print total amound (rounded up)
-    //final height (rounded dowm)
+    console.log(`Stone required: ${Math.ceil(stone)}`);
+    console.log(`Marble required: ${Math.ceil(marble)}`);
+    console.log(`Lapis Lazuli required: ${Math.ceil(lapis)}`);
+    console.log(`Gold required: ${Math.ceil(gold)}`);
+    console.log(`Final pyramid height: ${Math.floor(height)}`);
 
 }
 piramid(11, 1);
