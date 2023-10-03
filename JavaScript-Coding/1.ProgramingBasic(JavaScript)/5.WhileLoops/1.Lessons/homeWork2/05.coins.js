@@ -24,7 +24,7 @@ function coins(input) {
         } else if (money >= 1) {
             money -= 1;
         }
-        
+
     }
     console.log(coinCounter);
 }
