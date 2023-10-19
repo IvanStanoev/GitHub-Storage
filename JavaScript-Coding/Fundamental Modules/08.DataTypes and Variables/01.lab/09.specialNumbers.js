@@ -1,12 +1,12 @@
 function solve(num) {
 
     let sum = 0;
-    for(let i = 0; i < num; i++) {
+    for(let i = 1; i <= num; i++) {
 
-    sum += Number(num[i]);
+        currentNum = Number(i);
+
+        console.log(currentNum);
     
-    console.log(sum ?
-    `${num} Amazing? True` : `${num} Amazing? False`);
     }
 
 }

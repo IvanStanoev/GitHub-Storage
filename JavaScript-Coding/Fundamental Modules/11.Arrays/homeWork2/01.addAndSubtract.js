@@ -3,7 +3,7 @@ function solve(arr) {
     let oldSum = 0;
     let newSum = 0;
 
-    for (let i = 0; i <arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         let number = arr[i];
         oldSum += number;
 

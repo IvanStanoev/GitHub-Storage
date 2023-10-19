@@ -7,10 +7,10 @@ function solve(arr) {
         arr[i] = arr[j];
         arr[j] = temp;
 
-        
+
     }
-    
-    console.log(arr);
+
+    console.log(arr.join(' '));
 
 }
 solve(['a', 'b', 'c', 'd', 'e']);
