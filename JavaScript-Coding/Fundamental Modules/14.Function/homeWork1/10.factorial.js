@@ -1,4 +1,4 @@
-function factorialDivision(num1,num2) {
+function factorialDivision(num1, num2) {
 
     let factorial1 = calcFactorial(num1);
     let factorial2 = calcFactorial(num2);
@@ -17,4 +17,4 @@ function factorialDivision(num1,num2) {
         return factorial;
     }
 }
-factorialDivision(5,2);
+factorialDivision(5, 2);
