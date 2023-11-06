@@ -1,0 +1,5 @@
+function solveArrayManipulation() {
+
+
+}
+solveArrayManipulation();
