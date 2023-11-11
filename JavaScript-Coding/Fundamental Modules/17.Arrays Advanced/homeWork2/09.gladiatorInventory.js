@@ -1,5 +1,10 @@
-function solveGladiatorInventory() {
+function solveGladiatorInventory(arrOfStrings) {
 
 
 }
-solveGladiatorInventory();
+solveGladiatorInventory(['SWORD Shield Spear',
+'Buy Bag',
+'Trash Shield',
+'Repair Spear',
+'Upgrade SWORD-Steel']
+);

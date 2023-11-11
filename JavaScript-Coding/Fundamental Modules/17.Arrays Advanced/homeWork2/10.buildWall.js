@@ -1,5 +1,5 @@
-function solveBuildWall() {
+function solveBuildWall(arr) {
 
 
 }
-solveBuildWall();
+solveBuildWall([21, 25, 28]);

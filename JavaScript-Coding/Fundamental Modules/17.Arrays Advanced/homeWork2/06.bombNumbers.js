@@ -6,7 +6,7 @@ function sloveBombs(nums, bombInfo) {
 
     while (nums.includes(bombNum)) {
         let idx = nums.indexOf(bombNum);
-        nums.splice(idx - power, power * 2 + 1, 0);
+        nums.splice(Math.max(0, idx - power), power * 2 + 1, 0);
     }
 
     let sum = 0;
@@ -15,8 +15,7 @@ function sloveBombs(nums, bombInfo) {
         sum += num;
     }
 
-    console.log((nums));
     console.log(sum);
 }
 sloveBombs([1, 2, 2, 4, 2, 2, 2, 9],
-    [4, 2]);
+[4, 2]);
