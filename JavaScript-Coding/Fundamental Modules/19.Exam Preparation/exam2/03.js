@@ -1,8 +1,8 @@
 function numbers(str) {
 
-    let nums = str.split(' ');
-    let num2 = [];
-    num2 = Number(nums);
+    let nums = str.split(' ').map(Number);
+
+    console.log(nums);
 
     let avg = nums.reduce((acc, val) => acc + val) / nums.length;
 
@@ -16,6 +16,5 @@ function numbers(str) {
     } else {
         console.log(topNums.join(' '));
     }
-
 }
-numbers("10, 20, 30, 40, 50");
+numbers("10 20 30 40 50");

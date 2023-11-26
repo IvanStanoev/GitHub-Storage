@@ -11,16 +11,16 @@ function proccesOddNumbers(arr) {
 }
 proccesOddNumbers([10, 15, 20, 25]);
 
-// function proccesOddNumbers(arr) {
+function proccesOddNumbers(arr) {
 
-//     let oddIndex = arr.filter((x, i) => i % 2 != 0);
-//     //console.log(oddIndex);
+    let oddIndex = arr.filter((x, i) => i % 2 != 0);
+    //console.log(oddIndex);
 
-//     let doubled = oddIndex.map(x => x * 2);
-//     //console.log(doubled);
+    let doubled = oddIndex.map(x => x * 2);
+    //console.log(doubled);
 
-//     let reversed = doubled.reverse();
-//     let result = reversed.join(' ');
-//     console.log(result);
-// }
-// proccesOddNumbers([3, 0, 10, 4, 7, 3]);
+    let reversed = doubled.reverse();
+    let result = reversed.join(' ');
+    console.log(result);
+}
+proccesOddNumbers([3, 0, 10, 4, 7, 3]);

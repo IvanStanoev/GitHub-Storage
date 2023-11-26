@@ -49,4 +49,4 @@ function muOnline(arr) {
     console.log(`Health: ${hp}`);
 
 }
-muOnline(["rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000"]);
+muOnline("rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000");
