@@ -27,7 +27,7 @@ function cardGameSolve(arr) {
 
     for (let playerDeck of arr) {
 
-        let [playerName, cardsStr] = playerDeck.split(': ');    // сплитваме първоначалния масив и отделяме имената от картите - playerDeck.split(': ')
+        let [playerName, cardsStr] = playerDeck.split(': ');    // сплитваме първоначалния масив (arr) и отделяме имената от картите - playerDeck.split(': ')
         let cards = cardsStr.split(', ');             // сплитваме картите от [cardStr]-String към cards = [масив от картите по отделно]
 
         if (playerName in playersCards) {             // ako името го има като ключ в (playerCards)

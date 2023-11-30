@@ -1,0 +1,10 @@
+
+
+
+passwordGeneration([
+
+    'ilovepizza',
+    'ihatevegetables',
+    'orange'
+
+]);

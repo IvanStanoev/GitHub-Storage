@@ -1,5 +1,5 @@
 function legendaryFarming(str) {
-    
+
     let keyMaterials = {      // обект 
         shards: 0,            // ключ (shards) със стойност 0
         fragments: 0,         // ключ (fragments) със стойност 0
@@ -20,7 +20,7 @@ function legendaryFarming(str) {
 
         let qty = Number(materialsArr[i]);                  // количеството на [i] - [0] индекс
         let material = materialsArr[i + 1].toLowerCase();   // материялите на [i + 1] - [1] индекс
-        
+
         if (material in keyMaterials) {
             keyMaterials[material] += qty;
 
@@ -37,7 +37,7 @@ function legendaryFarming(str) {
                 junkMaterials[material] = qty;
             }
         }
-        
+
     }
 
     let keyMaterialsEntries = Object.entries(keyMaterials).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
@@ -52,5 +52,4 @@ function legendaryFarming(str) {
         console.log(`${material}: ${qty}`);
     }
 }
-
 legendaryFarming('3 Motes 5 stones 5 Shards 6 leathers 255 fragments 7 Shards');

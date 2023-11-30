@@ -1,0 +1,4 @@
+
+
+
+replaceChars('aaaaabbbbbcdddeeeedssaa');
