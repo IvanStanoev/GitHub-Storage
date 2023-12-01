@@ -3,7 +3,7 @@ function furniture(arr) {
     let items = [];
     let totalPrice = 0;
 
-    let pattern = />>(?<name>[A-Z][A-Za-z]+)<<(?<price>\d+\.?\d*)!(?<qty>\d+)/;  // в случая   >>Sofa<<312.23!3
+    let pattern = />>(?<name>[A-Z][A-Za-z]+)<<(?<price>\d+\.?\d*)!(?<qty>\d+)/g;  // в случая   >>Sofa<<312.23!3
 
     let command = arr.shift();
 
@@ -27,7 +27,7 @@ function furniture(arr) {
         command = arr.shift();
     }
 
-    console.log('Bought furniture:');
+    console.log('Bought furniture');
 
     if (items.length > 0) {
         console.log(items.join('\n'));

@@ -1,15 +1,15 @@
 function passwordGeneration(arr) {
-    
+
     let [str1, str2, replacedStr] = arr;
 
     let concatedStr = str1 + str2;
 
-    let vowels = ['a','e','i','o','u'];
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
     let idx = 0;
 
     for (let char of concatedStr) {
-        
-        if (vowels.includes(char)) {
+
+        if (vowels.includes(char)) {                // (/[aeoui]/.test(char)) - regex ако vowels има [aeoui] влизаме в проверката без [] го брой като цяла дума
             concatedStr = concatedStr.replace(char, replacedStr[idx].toUpperCase());
             idx++;
 
@@ -20,7 +20,7 @@ function passwordGeneration(arr) {
     }
 
     let password = concatedStr.split('').reverse().join('');
-    console.log(`Your generated password is: ${password}`);
+    console.log(`Your generated password is ${password}`);
 }
 
 
