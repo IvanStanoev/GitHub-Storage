@@ -1,8 +1,8 @@
 function muOnline(arr) {
 
-    let hp = 100;
-    let coins = 0;
-    let rooms = [];
+    let hp = 100;  // създаваме променлива за кръвта
+    let coins = 0; // тук ще съхраняваме монетите
+    let rooms = []; // тук ще държим стайте
     
     rooms = arr.split('|');
 

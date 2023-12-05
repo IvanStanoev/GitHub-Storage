@@ -5,6 +5,7 @@ function revealWords(wordsStr, text) {
     for (let word of words) {
         let len = word.length;
         let startTempate = '*'.repeat(len);
+        
         text = text.replace(startTempate, word);
     }
 

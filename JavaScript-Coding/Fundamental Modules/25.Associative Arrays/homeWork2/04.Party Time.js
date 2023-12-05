@@ -22,7 +22,7 @@ function partyTime(input) {
     for (let name of list) {
 
         if (name.charCodeAt(0) >= 48 && name.charCodeAt(0) <= 57) {    // връща ни кода(индека) който съответсва на ASCII кода на дадения символ
-            vips.push(name);                                               // ако условието е вярно добавяме имети към vips
+            vips.push(name);                                               // ако условието е вярно добавяме името към vips
 
         } else {                             // в протиен случай
             regulars.push(name);                                 // добавяме имети към regulars
