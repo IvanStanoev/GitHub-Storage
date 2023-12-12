@@ -4,8 +4,8 @@ function solve(input) {
     let tax = 0;
     let command = '';
     let discount = 0;
-    
-    for (let i = 0; i < input.length; i ++) {
+
+    for (let i = 0; i < input.length; i++) {
 
         if (input[i] == "special" || input[i] == "regular") {
             command = input[i];
@@ -20,25 +20,25 @@ function solve(input) {
             tax += 0.2 * curPrice;
             sumWithOutTax += curPrice;
         }
-        
+
     }
 
     if (sumWithOutTax == 0) {
         console.log('Invalid order!');
         return;
     }
-    
+
     if (command == "special") {
         discount = (sumWithOutTax + tax) * 0.10;
     }
     let sumAfterTax = (sumWithOutTax + tax) - discount;
 
-    console.log(`Congratulation you\'ve just bought a new computer!`);
+    console.log(`Congratulations you\'ve just bought a new computer!`);
     console.log(`Price without taxes: ${sumWithOutTax}$`);
     console.log(`Taxes: ${tax.toFixed(2)}$`);
     console.log('-----------');
-    console.log(`${(sumAfterTax).toFixed(2)}$`);
-    
+    console.log(`Total price: ${(sumAfterTax).toFixed(2)}$`);
+
 }
 solve([
     "1050",

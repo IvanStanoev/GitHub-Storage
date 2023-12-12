@@ -6,14 +6,12 @@ function muOnline(arr) {
     
     rooms = arr.split('|');
 
-
     for (let i = 0; i < rooms.length; i++) {
 
         let room = rooms[i].split(' ');
 
         let type = room[0];
         let num = Number(room[1]);
-
 
         if (type == 'potion') {
             if (hp + num > 100) {
@@ -23,15 +21,12 @@ function muOnline(arr) {
             console.log(`You healed for ${num} hp.`);
             console.log(`Current health: ${hp} hp.`);
 
-
         } else if (type == 'chest') {
             coins += num;
             console.log(`You found ${num} bitcoins.`);
 
-
         } else {
             hp -= num;
-
 
             if (hp <= 0) {
                 console.log(`You died! Killed by ${type}.`);
